@@ -1,92 +1,115 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background-color: #4b79a1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    background-color: #333;
-    overflow: hidden;
 }
 
 nav ul li {
-    float: left;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #111;
+    color: #ffdd57;
 }
 
-header, section, footer {
+main {
+    padding: 40px 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-header {
-    background-color: #f4f4f4;
+h2 {
+    color: #4b79a1;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 label {
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 input, button {
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    border-color: #4b79a1;
+    outline: none;
 }
 
 button {
-    background-color: #28a745;
+    background-color: #4b79a1;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #357a9c;
 }
 
 footer {
-    background-color: #f4f4f4;
-    position: fixed;
-    width: 100%;
+    background-color: #4b79a1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
 
-#calc-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#calc-container div {
-    margin-bottom: 20px;
-}
-
-#readings-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#readings-container div {
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
